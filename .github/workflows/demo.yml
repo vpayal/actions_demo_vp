@@ -2,8 +2,13 @@ name: demo python code
 on: push
 jobs:
   check the output of code
-  runs_on: ubuntu-latest
+  runs_on:ubuntu-latest
   steps:
+  
+  - name: checkout repo content
+        uses: actions/checkout@v2
+        
+        
   - name: setup python
         uses: actions/setup-python@v2
         with:
